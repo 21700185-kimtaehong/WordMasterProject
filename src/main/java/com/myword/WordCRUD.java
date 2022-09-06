@@ -1,0 +1,53 @@
+package com.myword;
+
+import java.util.ArrayList;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+
+public class WordCRUD implements ICRUD{
+    ArrayList<Word> list;
+    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    StringTokenizer wordToken = new StringTokenizer(reader.readLine());
+
+    WordCRUD(BufferedReader wordRead) throws IOException {
+        list = new ArrayList<>();
+        this.reader = reader;
+        this.wordToken = wordToken;
+    }
+
+    @Override
+    public Object add() throws IOException {
+        System.out.println("=> 난이도(1,2,3) & 새 단어 입력: ");
+        int level = Integer.parseInt(wordToken.nextToken());
+        String word = wordToken.nextToken();
+
+        System.out.println("뜻 입력: ");;
+        String meaning = reader.readLine();
+
+        return new Word(0, level, word, meaning);
+    }
+
+    public void addWord() throws IOException {
+        Word one = (Word)add();
+        list.add(one);
+        System.out.println("새 단어가 단어장에 추가되었습니다.");
+    }
+
+    @Override
+    public int update(Object obj) {
+        return 0;
+    }
+
+    @Override
+    public int delete(Object obj) {
+        return 0;
+    }
+
+    @Override
+    public void selectOne(int id) {
+
+    }
+}
