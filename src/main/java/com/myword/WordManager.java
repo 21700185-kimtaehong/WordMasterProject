@@ -15,18 +15,33 @@ public class WordManager {
     public void start() throws IOException {
         while(true) {
             int menu = selectMenu();
-            if(menu == 0) break;
-            if(menu == 4) {
-                wordCRUD.addWord();
-            }
-            else if(menu == 1) {
-                //
+            if(menu == 0) System.out.println("\n 프로그램 종료! 다음에 만나요~");break;
+            else {
+                switch(menu){
+                    case 1: wordCRUD.listAll();
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4: wordCRUD.addWord();
+                        break;
+                    case 5:
+                        break;
+                    case 6:
+                        break;
+                    case 7:
+                        break;
+                    default:
+                        System.out.println("1~7번 중에 고르세요.");
+                        break;
+                }
             }
         }
     }
 
 
-    public int selectMenu() throws IOException {
+    public int selectMenu() throws IOException { //menu4
         System.out.print(
                 "*** 영단어 마스터 ***\n" +
                 "********************\n" +
@@ -39,7 +54,7 @@ public class WordManager {
                 "7. 파일 저장\n" +
                 "0. 나가기\n" +
                 "********************\n" +
-                "=> 원하는 메뉴는?");
+                "=> 원하는 메뉴는? ");
 
         return Integer.parseInt(reader.readLine());
     }

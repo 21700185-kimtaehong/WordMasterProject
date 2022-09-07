@@ -25,7 +25,7 @@ public class WordCRUD implements ICRUD{
         int level = Integer.parseInt(wordToken.nextToken());
         String word = wordToken.nextToken();
 
-        System.out.println("뜻 입력: ");;
+        System.out.print("뜻 입력: ");;
         String meaning = reader.readLine();
 
         return new Word(0, level, word, meaning);
@@ -34,7 +34,7 @@ public class WordCRUD implements ICRUD{
     public void addWord() throws IOException {
         Word one = (Word)add();
         list.add(one);
-        System.out.println("새 단어가 단어장에 추가되었습니다.");
+        System.out.println("\n새 단어가 단어장에 추가되었습니다 !!!");
     }
 
     @Override
@@ -50,5 +50,14 @@ public class WordCRUD implements ICRUD{
     @Override
     public void selectOne(int id) {
 
+    }
+
+    public void listAll(){
+        System.out.println("-----------------------------");
+        for(int i=0; i<list.size(); ++i){
+            System.out.print((i+1) + " ");
+            System.out.println(list.get(i).toString());
+        }
+        System.out.println("-----------------------------");
     }
 }
