@@ -6,9 +6,10 @@ import java.io.InputStreamReader;
 
 public class WordManager {
     BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    WordCRUD wordCRUD;
 
-    WordManager() throws IOException {
-        WordCRUD wordCRUD = new WordCRUD(reader);
+    public WordManager() throws IOException {
+        wordCRUD = new WordCRUD(reader);
     }
 
     public void start() throws IOException {
@@ -16,7 +17,7 @@ public class WordManager {
             int menu = selectMenu();
             if(menu == 0) break;
             if(menu == 4) {
-                wordCRUD.
+                wordCRUD.addWord();
             }
             else if(menu == 1) {
                 //

@@ -10,17 +10,18 @@ import java.util.StringTokenizer;
 public class WordCRUD implements ICRUD{
     ArrayList<Word> list;
     BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-    StringTokenizer wordToken = new StringTokenizer(reader.readLine());
 
-    WordCRUD(BufferedReader wordRead) throws IOException {
+    public WordCRUD(BufferedReader reader) throws IOException {
         list = new ArrayList<>();
         this.reader = reader;
-        this.wordToken = wordToken;
     }
+
 
     @Override
     public Object add() throws IOException {
         System.out.println("=> 난이도(1,2,3) & 새 단어 입력: ");
+
+        StringTokenizer wordToken = new StringTokenizer(reader.readLine());
         int level = Integer.parseInt(wordToken.nextToken());
         String word = wordToken.nextToken();
 
