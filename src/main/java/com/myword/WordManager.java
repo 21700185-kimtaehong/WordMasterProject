@@ -24,11 +24,11 @@ public class WordManager {
                         break;
                     case 3:
                         break;
-                    case 4: wordCRUD.addWord();
+                    case 4: wordCRUD.addItem();
                         break;
                     case 5: wordCRUD.updateItem();
                         break;
-                    case 6: //wordCRUD.
+                    case 6: wordCRUD.deleteItem();
                         break;
                     case 7:
                         break;
