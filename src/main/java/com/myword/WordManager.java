@@ -15,7 +15,7 @@ public class WordManager {
     public void start() throws IOException {
         while(true) {
             int menu = selectMenu();
-            if(menu == 0) System.out.println("\n 프로그램 종료! 다음에 만나요~");break;
+            if(menu == 0) {System.out.println("\n 프로그램 종료! 다음에 만나요~");break;}
             else {
                 switch(menu){
                     case 1: wordCRUD.listAll();
@@ -26,9 +26,9 @@ public class WordManager {
                         break;
                     case 4: wordCRUD.addWord();
                         break;
-                    case 5:
+                    case 5: wordCRUD.updateItem();
                         break;
-                    case 6:
+                    case 6: //wordCRUD.
                         break;
                     case 7:
                         break;

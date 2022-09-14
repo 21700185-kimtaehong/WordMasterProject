@@ -19,7 +19,7 @@ public class WordCRUD implements ICRUD{
 
     @Override
     public Object add() throws IOException {
-        System.out.println("=> 난이도(1,2,3) & 새 단어 입력: ");
+        System.out.print("=> 난이도(1,2,3) & 새 단어 입력: ");
 
         StringTokenizer wordToken = new StringTokenizer(reader.readLine());
         int level = Integer.parseInt(wordToken.nextToken());
@@ -42,6 +42,21 @@ public class WordCRUD implements ICRUD{
         return 0;
     }
 
+    public void updateItem() throws IOException {
+        System.out.print("=> 수정할 단어 검색: ");
+        String keyword = reader.readLine();
+        ArrayList<Integer> idlist = this.listAll(keyword);
+
+        System.out.print("=> 수정할 번호 선택: ");
+        int id = Integer.parseInt(reader.readLine());
+        System.out.println("=> 뜻 입력: ");
+        String meaning = reader.readLine();
+
+        Word word = list.get(idlist.get(id-1));
+        word.setMeaning(meaning);
+        System.out.println("단어가 수정되었습니다. ");
+    }
+
     @Override
     public int delete(Object obj) {
         return 0;
@@ -60,4 +75,22 @@ public class WordCRUD implements ICRUD{
         }
         System.out.println("-----------------------------");
     }
+
+    public ArrayList<Integer> listAll(String keyword){
+        ArrayList<Integer> idlist = new ArrayList<>;
+
+        System.out.println("-----------------------------");
+        int j=0;
+        for(int i=0; i<list.size(); ++i){
+            String word = list.get(i).getWord();
+            if(!word.contains(keyword)) continue;
+
+            System.out.print((i+1) + " ");
+            System.out.println(list.get(i).toString());
+            idlist.add(i);
+            j++;
+        }
+        System.out.println("-----------------------------");
+    }
+
 }
