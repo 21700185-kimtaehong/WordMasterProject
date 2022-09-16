@@ -13,6 +13,8 @@ public class WordManager {
     }
 
     public void start() throws IOException {
+        wordCRUD.loadFile();
+
         while(true) {
             int menu = selectMenu();
             if(menu == 0) {System.out.println("\n 프로그램 종료! 다음에 만나요~");break;}
@@ -30,7 +32,7 @@ public class WordManager {
                         break;
                     case 6: wordCRUD.deleteItem();
                         break;
-                    case 7:
+                    case 7: wordCRUD.saveFile();
                         break;
                     default:
                         System.out.println("1~7번 중에 고르세요.");

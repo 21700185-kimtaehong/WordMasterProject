@@ -1,15 +1,14 @@
 package com.myword;
 
+import java.io.*;
 import java.util.ArrayList;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 
 public class WordCRUD implements ICRUD{
     ArrayList<Word> list;
     BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    final String fname = "Dictionary.txt";
 
     public WordCRUD(BufferedReader reader) throws IOException {
         list = new ArrayList<>();
@@ -121,5 +120,46 @@ public class WordCRUD implements ICRUD{
         return idlist;
     }
 
+    public void loadFile() {
+        try{
+            reader = new BufferedReader(new FileReader(fname));
+            String wordLine;
+            int count = 0;
+
+            while(true){
+                wordLine = reader.readLine();
+                if(wordLine==null) break;
+
+                String data[] = wordLine.split("\\|");
+                int level = Integer.parseInt(data[0]);
+                String word = data[1];
+                String meaning = data[2];
+                list.add(new Word(0, level, word, meaning));
+                count++;
+            }
+
+
+            reader.close();
+            System.out.println("===> " + count + "개 로딩 완료!!!");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
+    public void saveFile() {
+        try {
+            PrintWriter pr = new PrintWriter(new FileWriter("test.txt"));
+            for(Word one : list){
+                pr.write(one.toFileString() + "\n");
+            }
+            pr.close();
+            System.out.println("==> 데이터 저장 완료");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
 
 }
