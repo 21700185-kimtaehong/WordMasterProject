@@ -1,3 +1,5 @@
 1|kiwi|키위
 1|hi|안녕
 1|bye|잘가
+1|apple|사과
+3|mercy|자비

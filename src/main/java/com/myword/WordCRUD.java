@@ -31,7 +31,7 @@ public class WordCRUD implements ICRUD{
     }
 
     public void addItem() throws IOException {
-        Word one = (Word)add();
+        Word one = (Word)this.add();
         list.add(one);
         System.out.println("\n새 단어가 단어장에 추가되었습니다 !!!");
     }
@@ -122,12 +122,12 @@ public class WordCRUD implements ICRUD{
 
     public void loadFile() {
         try{
-            reader = new BufferedReader(new FileReader(fname));
+            BufferedReader freader = new BufferedReader(new FileReader(fname));
             String wordLine;
             int count = 0;
 
             while(true){
-                wordLine = reader.readLine();
+                wordLine = freader.readLine();
                 if(wordLine==null) break;
 
                 String data[] = wordLine.split("\\|");
@@ -138,8 +138,7 @@ public class WordCRUD implements ICRUD{
                 count++;
             }
 
-
-            reader.close();
+            freader.close();
             System.out.println("===> " + count + "개 로딩 완료!!!");
         } catch (IOException e) {
             e.printStackTrace();
@@ -150,7 +149,7 @@ public class WordCRUD implements ICRUD{
 
     public void saveFile() {
         try {
-            PrintWriter pr = new PrintWriter(new FileWriter("test.txt"));
+            PrintWriter pr = new PrintWriter(new FileWriter(fname));
             for(Word one : list){
                 pr.write(one.toFileString() + "\n");
             }

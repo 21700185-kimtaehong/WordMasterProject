@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f772e707-f854-46aa-9250-2b365313096c" name="Changes" comment="3 change&#10;menu 1 complete">
-      <change afterPath="$PROJECT_DIR$/Dictionary.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/myword/Word.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myword/Word.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/myword/WordCRUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myword/WordCRUD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/myword/WordManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myword/WordManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +65,8 @@
       <workItem from="1662549686710" duration="4503000" />
       <workItem from="1663158710166" duration="4151000" />
       <workItem from="1663170131778" duration="6122000" />
+      <workItem from="1663403216971" duration="248000" />
+      <workItem from="1663403473720" duration="2882000" />
     </task>
     <task id="LOCAL-00001" summary="2 change&#10;menu 4, 0 complete">
       <created>1662527364570</created>
@@ -117,7 +116,7 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/myword/WordCRUD.java</url>
           <line>64</line>
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
