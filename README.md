@@ -10,3 +10,13 @@
 
 # [0. 나가기]
 <img width=300 src="https://user-images.githubusercontent.com/100787084/188871332-cd6eff3d-d03f-4412-a044-fccc79fc5217.PNG">
+
+# [5. 단어수정]
+<img width=300 src="https://user-images.githubusercontent.com/100787084/190853467-41bb6081-4b11-465e-9a57-6546e0d6ad2b.PNG">
+<img width=300 src="https://user-images.githubusercontent.com/100787084/190853531-94fa9a3e-4828-427e-ac90-e4697b090e29.PNG">
+
+# [6. 단어삭제]
+<img width=300 src="https://user-images.githubusercontent.com/100787084/190853611-5c5d97e2-5a6a-4842-a45e-18286e5cb23f.PNG">
+<img width=300 src="https://user-images.githubusercontent.com/100787084/190853612-3515ff21-1904-4357-9378-02dd42493ca3.PNG">
+
+
