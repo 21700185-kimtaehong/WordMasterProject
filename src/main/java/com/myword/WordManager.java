@@ -22,9 +22,9 @@ public class WordManager {
                 switch(menu){
                     case 1: wordCRUD.listAll();
                         break;
-                    case 2:
+                    case 2: wordCRUD.searchLevel();
                         break;
-                    case 3:
+                    case 3: wordCRUD.searchWord();
                         break;
                     case 4: wordCRUD.addItem();
                         break;
