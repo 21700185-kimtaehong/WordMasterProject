@@ -16,6 +16,10 @@
 <img width=300 src="https://user-images.githubusercontent.com/100787084/190854012-fabee0c9-b2ef-40b7-a5b6-363d9bbbd71d.PNG">
 
 
+# [시작시 파일 로딩]
+<img width=300 src="https://user-images.githubusercontent.com/100787084/190854395-d310682c-3f7a-425c-ab25-1d9f4f1438b6.PNG">
+
+
 # [5. 단어수정]
 <img width=300 src="https://user-images.githubusercontent.com/100787084/190853467-41bb6081-4b11-465e-9a57-6546e0d6ad2b.PNG">
 <img width=300 src="https://user-images.githubusercontent.com/100787084/190853678-fd119dc8-d048-40a3-8163-0e9aa406b158.PNG">
